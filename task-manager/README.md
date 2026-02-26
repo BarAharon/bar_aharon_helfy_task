@@ -1,5 +1,8 @@
 # Task Manager App
 
+## Setup
+- cd task-manager
+
 ## Backend Setup
 1. cd backend
 2. npm install

@@ -1,15 +1,19 @@
 require("dotenv").config();
 const express = require("express");
+const bodyParser = require('body-parser');
 const cors = require("cors");
+
+const routerTasks = require('./routes/tasks.js');
 
 const app = express();
 
+const build = express.static('public');
+app.use(build);
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get("/api/health", (req, res) => {
-  res.json({ message: "Backend is alive 🚀" });
-});
+app.use('/api/tasks', routerTasks);
 
 const PORT = 3000;
 

@@ -1,0 +1,49 @@
+.task-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    background-color: #fff;
+    transition: background-color 0.2s;
+  }
+  
+  .task-item.completed {
+    background-color: #f0f0f0;
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .priority.low {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .priority.medium {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  .priority.high {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .description {
+    margin: 8px 0;
+  }
+  
+  .created-at {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .task-list {
+    max-width: 600px;
+    margin: 40px auto;
+  }

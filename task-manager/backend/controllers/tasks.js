@@ -12,7 +12,7 @@ const getAllTasks = async (req, res) => {
 const createTask = async (req, res) => {
     try {
         const { title, description, priority } = req.body;
-
+        
         if (!title || !priority) {
             return res.status(400).json({ error: 'Title and priority are required' });
         }

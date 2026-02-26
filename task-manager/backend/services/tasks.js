@@ -1,9 +1,26 @@
-let tasks = [];
-let nextId = 1;
+let tasks = [
+  {
+    id: 1,
+    title: "Do dishes",
+    description: "plate are not clean",
+    completed: false,
+    createdAt: new Date(),
+    priority: "high"
+  },
+  {
+    id: 2,
+    title: "make laundary",
+    description: "clothes are not clean",
+    completed: true,
+    createdAt: new Date(),
+    priority: "medium"
+  }
+];
+let nextId = 3;
 
 const getAllTasks = async () => tasks;
 
-const createTask = async (title, description, priority) => {
+const createTask = async ({ title, description, priority }) => {
   const newTask = {
     id: nextId++,
     title,

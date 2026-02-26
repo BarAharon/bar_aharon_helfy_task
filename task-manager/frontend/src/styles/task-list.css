@@ -1,0 +1,15 @@
+.list-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  cursor: grab;
+  padding: 20px;
+}
+
+.list-container:active {
+  cursor: grabbing;
+}
+
+.list-container::-webkit-scrollbar {
+  display: none;
+}

@@ -25,3 +25,60 @@
   .task-form button:hover {
     background: #4338ca;
   }
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.edit-form input,
+.edit-form textarea,
+.edit-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+.edit-form input:focus,
+.edit-form textarea:focus,
+.edit-form select:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.edit-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.edit-form button {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.edit-form button:first-of-type {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.edit-form button:first-of-type:hover {
+  background-color: #357ab7;
+}
+
+.edit-form button:last-of-type {
+  background-color: #ccc;
+  color: #333;
+}
+
+.edit-form button:last-of-type:hover {
+  background-color: #b3b3b3;
+}

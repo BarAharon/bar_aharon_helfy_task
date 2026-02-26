@@ -22,6 +22,16 @@ const createTask = async ({ title, description, priority }) => {
   }
 };
 
+const updateTask = async (id, { title, description, priority }) => {
+  try {
+    const response = await axios.put(`${API_URL}/${id}`, { title, description, priority });
+    return response.data;
+  } catch (err) {
+    console.error(`Error updating task ${id}:`, err);
+    return null;
+  }
+};
+
 const deleteTask = async (id) => {
   try {
     const response = await axios.delete(`${API_URL}/${id}`);
@@ -42,4 +52,4 @@ const toggleTaskCompletion = async (id) => {
   }
 };
 
-export default { getAllTasks, createTask, deleteTask, toggleTaskCompletion };
+export default { getAllTasks, createTask, updateTask, deleteTask, toggleTaskCompletion };

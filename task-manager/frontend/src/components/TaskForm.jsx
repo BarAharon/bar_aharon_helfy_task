@@ -11,11 +11,7 @@ const TaskForm = ({ onTaskCreated }) => {
     e.preventDefault();
 
     if (!title.trim()) return;
-    const newTask = await taskService.createTask({
-      title,
-      description,
-      priority
-    });
+    const newTask = await taskService.createTask({ title, description, priority });
 
     if (newTask) {
       onTaskCreated(newTask);

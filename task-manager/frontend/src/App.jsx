@@ -8,7 +8,6 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [filteredTasks, setFilteredTasks] = useState([]);
 
-  // Priority order map
   const priorityOrder = { high: 3, medium: 2, low: 1 };
 
   const sortTasksByPriority = (tasksArray) => {

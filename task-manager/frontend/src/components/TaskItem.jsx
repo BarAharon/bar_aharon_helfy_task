@@ -26,7 +26,7 @@ const TaskItem = ({ task, onTaskUpdated, onTaskDeleted }) => {
 
   const handleSave = async () => {
     try {
-      const updatedTask = await taskService.createTask({ 
+      const updatedTask = await taskService.updateTask(task.id, {
         title: editTitle,
         description: editDescription,
         priority: editPriority,

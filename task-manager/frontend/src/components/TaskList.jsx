@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import TaskItem from './TaskItem';
 import '../styles/task-list.css';
 
-const TaskCarousel = ({ tasks, onTaskUpdated, onTaskDeleted }) => {
+const TaskList = ({ tasks, onTaskUpdated, onTaskDeleted }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [displayTasks, setDisplayTasks] = useState([]);
@@ -27,14 +27,18 @@ const TaskCarousel = ({ tasks, onTaskUpdated, onTaskDeleted }) => {
   }, [tasks]);
 
   const goToNext = () => {
-    if (isTransitioning || tasks.length === 0) return;
+    if (isTransitioning || tasks.length === 0) {
+      return;
+    }
     
     setIsTransitioning(true);
     setCurrentIndex((prev) => prev + 1);
   };
 
   const goToPrev = () => {
-    if (isTransitioning || tasks.length === 0) return;
+    if (isTransitioning || tasks.length === 0) {
+      return;
+    }
     
     setIsTransitioning(true);
     setCurrentIndex((prev) => prev - 1);
@@ -151,4 +155,4 @@ const TaskCarousel = ({ tasks, onTaskUpdated, onTaskDeleted }) => {
   );
 };
 
-export default TaskCarousel;
+export default TaskList;
